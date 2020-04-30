@@ -1,0 +1,124 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, tikz, bm, pgfplots, tcolorbox}
+\pgfplotsset{compat = 1.16}
+
+\title{Quadratic Formula}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Solve quadratic equations using the quadratic formula}
+
+\begin{frame}{The Quadratic Formula}
+The \alert{quadratic formula} can be used to solve \underline{any} quadratic equation that is equal to 0.	\newline\\	\pause
+
+\begin{center}
+For $ax^2 + bx + c = 0$
+\end{center}
+
+\begin{tcolorbox}[colback=red!10!white, colframe=red!60!black, title=Quadratic Formula]
+\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Example 1}
+Solve each of the following using the quadratic formula. Exact answers only.	\newline\\
+(a) \quad $3x^2 + 8x - 28 = 0$		\pause
+\[ a = 3 \quad b = 8 \quad c = -28 \]
+\begin{align*}
+\onslide<3->{x &= \frac{-8 \pm \sqrt{8^2-4(3)(-28)}}{2(3)}} \\[10pt]
+\onslide<4->{x &= \frac{-8 \pm \sqrt{400}}{6}} \\[10pt]
+\onslide<5->{x &= \frac{-8 \pm 20}{6}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+\[x = \frac{-8 \pm 20}{6} \]
+\begin{align*}
+\onslide<2->{x &= \frac{-8+20}{6} & x &= \frac{-8-20}{6}} \\[10pt]
+\onslide<3->{x &= 2 & x &= -\frac{14}{3}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad $5x^2 + 9x - 5 = 0$ \pause
+\[ a = 5 \quad b = 9 \quad c = -5 \]
+\begin{align*}
+\onslide<3->{x &= \frac{-9 \pm \sqrt{9^2-4(5)(--5)}}{2(5)}} \\[10pt]
+\onslide<4->{x &= \frac{-9 \pm \sqrt{181}}{10}}
+\end{align*}
+\onslide<5->{\[x = \frac{-9 + \sqrt{181}}{10} \quad x = \frac{-9 - \sqrt{181}}{10}\]}
+\end{frame}
+
+\begin{frame}{Example 1}
+(c) \quad $6x^2 - 6x - 15 = -10$ \pause
+\[ 6x^2 - 6x - 5 = 0 \]	\pause
+\[a = 6 \quad b = -6 \quad c = -5 \]
+\begin{align*}
+\onslide<4->{x &= \frac{6 \pm \sqrt{6^2-4(6)(-5)}}{2(6)}} \\[10pt]
+\onslide<5->{x &= \frac{6 \pm \sqrt{156}}{12}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+\[x = \frac{6 \pm \sqrt{156}}{12} \]
+\begin{align*}
+\onslide<2->{x &= \frac{6 \pm 2\sqrt{39}}{12}} \\[10pt]
+\onslide<3->{x &= \frac{2\left(3\pm \sqrt{39}\right)}{12}} \\[10pt]
+\onslide<4->{x &= \frac{3 \pm \sqrt{39}}{6}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(d) \quad $7x^2 + 20x - 8 = -3x^2 - 1 + 10x$	\pause
+\[ 10x^2 + 10x - 7 \]	\pause
+\[a = 10 \quad b = 10 \quad c = -7\]
+\begin{align*}
+\onslide<4->{x &= \frac{-10 \pm \sqrt{10^2-4(10)(-7)}}{2(10)}} \\[10pt]
+\onslide<5->{x &= \frac{-10 \pm \sqrt{380}}{20}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+\[x = \frac{-10 \pm \sqrt{380}}{20} \]
+\begin{align*}
+\onslide<2->{x &= \frac{-10 \pm 2\sqrt{95}}{20}} \\[10pt]
+\onslide<3->{x &= \frac{2\left(-5\pm \sqrt{95}\right)}{20}} \\[10pt]
+\onslide<4->{x &= \frac{-5 \pm \sqrt{95}}{10}}
+\end{align*}
+\end{frame}
+
+\section{Use the discriminant to determine the types of solutions to a quadratic equation}
+
+\begin{frame}{The Discriminant}
+The expression {\color{blue}$b^2-4ac$} in the square root is called the \alert{discriminant}. It can tell us about the solutions to a quadratic equation:	\newline\\	\pause
+
+\begin{itemize}
+	\item \textbf{Discriminant is negative:} No real values of $x$ make the original equation true. \newline\\ \pause
+	\item \textbf{Discriminant is 0:} There is one value of $x$ (called a \emph{double root}). \newline\\ \pause
+	\item \textbf{Discriminant is positive:} There are 2 unique answers for $x$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Discriminant}
+In addition, if $\sqrt{b^2 - 4ac}$ equals a \alert{rational number}, then the quadratic equation is factorable over the integers (only use integers in your factoring).
+\end{frame}
+
+\end{document}
