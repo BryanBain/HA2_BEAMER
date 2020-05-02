@@ -6,6 +6,7 @@ Beamer slides of Honors Algebra 2 notes
   <li>amsmath</li>
   <li>array</li>
   <li>graphicx</li>
+  <li>marvosym</li>
   <li>pgfplots</li>
   <li>tikz</li>
   <li>tkz-euclide</li>
