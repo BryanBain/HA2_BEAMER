@@ -10,6 +10,7 @@ Beamer slides of Honors Algebra 2 notes
   <li>pgfplots</li>
   <li>tikz</li>
   <li>tkz-euclide</li>
+  <li>tcolorbox</li>
   <li>xcolor</li>
 </ul>
   
