@@ -1,0 +1,126 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, tikz, pgfplots, tcolorbox, xcolor, array, bm}
+\usetikzlibrary{calc}
+\pgfplotsset{compat = 1.16}
+
+\tikzstyle{input} = [circle, text centered, radius = 1cm, draw = black]
+\tikzstyle{function} = [rectangle, text centered, minimum width = 2cm, minimum height = 1cm, draw = black]
+
+\title{Domain and Range of Functions}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\section{Find the domain of a function}
+
+\begin{frame}{Intro}
+Often times when evaluating functions, we are interested in which values we are allowed to put into the function, as well as which values the functions will give us back.	\newline\\	\pause
+
+\begin{tcolorbox}[colback= red!25!white, colframe=red!30!blue, title=Domain]
+The \textbf{domain} of a function is the set of all possible legal input values ($x$) of the function.
+\end{tcolorbox}	\vspace{8pt} \pause
+
+\begin{tcolorbox}[colback= red!25!white, colframe=red!30!blue, title=Range]
+The \textbf{range} of a function is the set of all possible output values ($y$) from the domain.
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Domain Restrictions}
+Right now, there are only 2 things to worry about when finding the domain of a function:	\newline\\	\pause
+\begin{itemize}
+	\item You are not allowed to divide by 0	\newline\\	\pause
+	\item You can't take the square root (or any even root such as $\sqrt[4]{\;}, \, \sqrt[6]{\;}, \, \dots$) of a negative number.	\newline\\	\pause
+\end{itemize}
+
+Both of the above issues will result in an error message from your calculator, and we would like to avoid those. 
+\end{frame}
+
+\begin{frame}{Domain}
+Aside from the 2 scenarios previously listed, most of the functions will have domains in which you can evaluate \underline{any} value of $x$ you like.	\newline\\	\pause
+
+Those domains are \alert{all real numbers}, or $\mathbb{R}$.
+\end{frame}
+
+\begin{frame}{Example 1}
+State the domain of each.	\newline\\
+(a) \quad $f(x) = -2x+7$	\newline\\	\pause
+All real numbers, $\mathbb{R}$ \vspace{18pt} \pause
+
+(b) \quad $f(x) = (x+4)^2$	\newline\\	\pause
+$\mathbb{R}$
+\end{frame}
+
+\begin{frame}{Example 1}
+(c) \quad $f(x) = \sqrt{x-3}$
+\begin{align*}
+\onslide<2->{x - 3 &\geq 0} \\[6pt]
+\onslide<3->{x &\geq 3}
+\end{align*}
+\onslide<4->{(d) \quad $f(x) = \sqrt[3]{x-3}$}	\newline\\	
+\onslide<5->{$\mathbb{R}$}
+\end{frame}
+
+\begin{frame}{Example 1}
+(e) \quad $f(x) = \dfrac{3}{2x+5}$
+\begin{align*}
+\onslide<2->{2x + 5 &\neq 0} \\[8pt]
+\onslide<3->{2x &\neq -5} \\[8pt]
+\onslide<4->{x &\neq -\frac{5}{2}}
+\end{align*}
+\end{frame}
+
+\section{Find the range of a function}
+
+\begin{frame}{Range}
+Finding the range can be a bit more challenging with some functions. \newline\\ \pause
+
+When we look at finding the inverse of a function, we'll learn a way to find the range of a given function. \newline\\ \pause
+
+For now, we can look at the graphs of functions to assist us in finding the range. 
+\end{frame}
+
+\begin{frame}{Example 2}
+State the range of each. \newline\\
+(a) \quad $f(x) = -2x+7$	\newline\\	\pause
+All real numbers, $\mathbb{R}$
+\end{frame}
+
+\begin{frame}{Example 2}
+(b) \quad $f(x) = (x+4)^2$	\newline\\	\pause
+$y \geq 0$
+\end{frame}
+
+\begin{frame}{Example 2}
+(c) \quad $f(x) = \sqrt{x-3}$	\newline\\	\pause
+$y \geq 0$
+\end{frame}
+
+\begin{frame}{Example 2}
+(d) \quad $f(x) = -\sqrt{x-3}$	\newline\\	\pause
+$y \leq 0$
+\end{frame}
+
+\begin{frame}{Example 2}
+(e) \quad $f(x) = \sqrt{x-3} + 6$	\newline\\	\pause
+$y \geq 6$
+\end{frame}
+
+\begin{frame}{Example 2}
+(f) \quad $f(x) = \dfrac{3}{2x+5}$	\newline\\	\pause
+$y \neq 0$
+\end{frame}
+
+\end{document}
