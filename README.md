@@ -5,6 +5,7 @@ Beamer slides of Honors Algebra 2 notes
 <ul>
   <li>amsmath</li>
   <li>array</li>
+  <li>colortbl</li>
   <li>graphicx</li>
   <li>marvosym</li>
   <li>pgfplots</li>
