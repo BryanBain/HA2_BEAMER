@@ -1,0 +1,221 @@
+\documentclass[t,usenames,dvipsnames]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, xcolor, tikz, pgfplots}
+
+\pgfplotsset{compat = 1.16}
+\usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
+\pgfplotsset{every axis/.append style = {axis lines = middle}}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+\everymath{\displaystyle}
+
+\title{Graphs of Quadratic Expressions}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\section{Determine the vertex and axis of symmetry of a quadratic function in standard form}
+
+\begin{frame}{Graphing Quadratic Expressions}
+We will be looking at graphing equations in the form
+\[ y = ax^2 + bx + c \]
+where $a$, $b$, and $c$ are real numbers with $a \neq 0$. 
+\end{frame}
+
+\begin{frame}{Graph of a Quadratic Expression}
+For $y= x^2$, the graph below is a \alert{parabola}.
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+xmin = -3.5, xmax = 3.5,
+ymin = -0.5, ymax = 4.75,
+xtick = {-3,-2,...,3},
+ytick = {1,2,3,4}
+]
+\addplot[color=blue, very thick, samples=200, smooth] {x^2};
+\addplot[color=blue, mark=*, only marks] coordinates {(-2,4) (-1,1) (0,0) (1,1) (2,4)};
+\node at (axis cs:-2,4) [left] {$(-2,4)$};
+\node at (axis cs:-1,1) [left] {$(-1,1)$};
+\node at (axis cs:0,0) [below] {$(0,0)$};
+\node at (axis cs:1,1) [right] {$(1,1)$};
+\node at (axis cs:2,4) [right] {$(2,4)$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Graph of a Quadratic Expression}
+The point $(0,0)$ is called the \alert{vertex} of the parabola and can be either a minimum (smile) or maximum point (frown). \newline\\  \pause
+
+Through the vertex is a vertical line called the \alert{axis of symmetry} that divides the parabola into 2 equal halves. 
+\end{frame}
+
+\begin{frame}{Example 1}
+Find the vertex, state whether the vertex is a maximum or minimum, and find the equation of the axis of symmetry for each.   \newline\\
+(a) \quad $y = x^2 + 4x + 1$  \newline\\
+\begin{minipage}{0.6\textwidth}
+\onslide<2->{
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+xmin = -5, xmax = 1,
+ymin = -4, ymax = 2,
+xtick = {-4,-3,-2,-1,0},
+ytick = {-3,-2,-1,0,1}
+]
+\addplot[color=blue, very thick, samples=200, smooth] {(x+2)^2 - 3};
+\only<5->{\draw[color=red, dashed, very thick, <->, >=stealth] (axis cs: -2,-4) -- (axis cs: -2,2);}
+\end{axis}
+\end{tikzpicture} }
+\end{minipage}
+\hspace{-0.5cm}
+\begin{minipage}{0.4\textwidth}
+\onslide<3->{Vertex $(-2,-3)$}	\\[8pt]
+\onslide<4->{Vertex is a minimum}	\\[8pt]
+\onslide<5->{Axis of symmetry: $x = -2$}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{Example 1}
+(b) \quad $y = -2x^2+12x-17$    \newline\\
+\begin{minipage}{0.55\textwidth}
+\onslide<2->{
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+xmin = -1, xmax = 7,
+ymin = -8, ymax = 2,
+xtick = {-1,0,...,5},
+ytick = {-7,-6,...,1}
+]
+\addplot[color=blue, very thick, samples=200, smooth, domain=0:6] {-2*(x-3)^2 + 1};
+\only<5->{\draw[color=red, dashed, very thick, <->, >=stealth] (axis cs: 3,-8) -- (axis cs: 3,2);}
+\end{axis}
+\end{tikzpicture}}
+\end{minipage}
+\hspace{-0.25cm}
+\begin{minipage}{0.4\textwidth}
+\onslide<3->{Vertex $(3,1)$} \\[8pt]
+\onslide<4->{Vertex is a maximum} \\[8pt]
+\onslide<5->{Axis of symmetry: $x=3$}
+\end{minipage}
+\end{frame}
+
+
+\section{Convert between standard and general form of quadratic expressions}
+
+\begin{frame}{Standard and General Form of Quadratic Expressions}
+For a quadratic function: \newline\\  
+\begin{itemize}
+    \item<+-> The \alert{general form} is $y = ax^2+bx+c$
+    \begin{itemize}
+        \item<+-> $a$, $b$, and $c$ are real numbers
+        \item<+-> $a \neq 0$    
+    \end{itemize}   \vspace{8pt}
+    \item<+-> The \alert{standard form} is $y = a(x-h)^2 + k$
+    \begin{itemize}
+        \item<+-> Vertex is $(h,k)$
+        \item<+-> $a \neq 0$
+        \item<+-> $a$, $h$, and $k$ are real numbers
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Converting From General to Standard Form}
+    To convert from general form $y = ax^2 + bx + c$ to standard form $y = a(x-h)^2+k$ \newline\\
+    \begin{enumerate}
+        \onslide<2->{\item Find the vertex:}  \\[8pt]
+        \begin{itemize}
+            \onslide<2->{\item $x$-coordinate: $\frac{-b}{2a}$} \\[8pt]
+            \onslide<2->{\item $y$-coordinate: Evaluate expression at $x$-coordinate} \\[8pt]
+            \onslide<2->{\item Or use graphing technology} \\[8pt]
+        \end{itemize}
+        \onslide<2->{\item Use the same value of $a$}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Example 2}
+Convert each to standard form.  \newline\\
+(a) \quad $y = x^2 - 4x + 3$ \newline\\
+\onslide<2->{Vertex:} \newline\\
+\onslide<3->{$x = \frac{-(-4)}{2(1)}$} \newline\\
+\onslide<4->{$x = 2$} \newline\\
+\onslide<5->{$y = 2^2 - 4(2) + 3$} \newline\\
+\onslide<6->{$y = -1$}
+\end{frame}
+
+\begin{frame}{Example 2}
+(a) \quad $y = x^2 - 4x + 3$ \newline\\
+Vertex: $(2,-1)$    \newline\\
+\onslide<2->{$a = 1$}
+\onslide<3->{\[y = (x-2)^2 - 1\]}
+\end{frame}
+
+\begin{frame}{Example 2}
+Convert each to standard form.  \newline\\
+(b) \quad $y = 6-x-x^2$  
+\onslide<2->{\[g(x) = -x^2 - x + 6\]}
+\begin{minipage}{0.55\textwidth}
+\onslide<3->{
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+xmin = -4, xmax = 3,
+ymin = -4, ymax = 7,
+xtick = {-3,-2,...,2},
+ytick = {-3,-2,...,6}
+]
+\addplot[color=blue, very thick, samples=200, smooth] {-x^2-x+6};
+\addplot[color=blue, mark=*] coordinates {(-0.5,6.25)};
+\end{axis}
+\end{tikzpicture}}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\onslide<4->{Vertex: $\left(-\frac{1}{2},\frac{25}{4}\right)$} \\[12pt]
+\onslide<5->{$a = -1$} \\[12pt]
+\onslide<6->{$y = -\left(x+\frac{1}{2}\right)^2 + \frac{25}{4}$}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Converting From Standard to General Form}
+To convert from \newline
+\[ y = a(x-h)^2 + k \]	\newline
+form to 	\newline
+\[ y = ax^2 + bx + c\]	\newline
+just {\color{blue}\textbf{do the math}} and remember your \underline{order of operations}.
+\end{frame}
+
+\begin{frame}{Example 3}
+(a) \quad Convert $y = (x+2)^2 - 3$ to general form.
+\begin{align*}
+	\onslide<2->{y &= (x+2)^2 - 3} \\[8pt]
+    \onslide<3->{y &= x^2 + 4x + 4 - 3} \\[8pt]
+    \onslide<4->{y &= x^2 + 4x + 1}	\\[8pt]
+    \onslide<5->{y &= x^2 + 4x + 1}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 3}
+(b) \quad Convert $y = -(x-7)^2 + 10$ to general form.
+\begin{align*}
+	\onslide<2->{y &= -(x-7)^2 + 10} \\[8pt]
+	\onslide<3->{y &= -(x^2-14x+49) + 10} \\[8pt]
+	\onslide<4->{y &= -x^2 + 14x - 49 + 10} \\[8pt]
+	\onslide<5->{y &= -x^2 + 14x - 48}
+\end{align*}
+\end{frame}
+
+\end{document}
