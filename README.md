@@ -22,6 +22,7 @@ Beamer slides of Honors Algebra 2 notes
   <li>Absolute Value Equations and Inequalities</li>
   <li>Factoring Techniques</li>
   <li>Quadratic Formula</li>
+  <li>Quadratic Functions</li>
   <li>Complex Numbers</li>
   <li>Intro to Functions</li>
   <li>Operations with Functions</li>
