@@ -1,0 +1,471 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, bm, tcolorbox}
+
+\title{Matrix Algebra}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Find the sum and difference of two or more matrices.}
+
+\begin{frame}{What is a Matrix?}
+\begin{tcolorbox}[colback=red!20!white, colframe=red!30!black, title=\textbf{Matrix}]
+A \textbf{matrix} is a rectangular array of numbers.
+\end{tcolorbox}
+\vspace{10pt} \pause
+
+\begin{tcolorbox}[colback=red!20!white, colframe=red!30!black, title=\textbf{Matrix Dimensions}]
+The \textbf{dimensions} of a matrix (\textit{pl: matrices}) are listed as
+\begin{center}
+Number of rows ($r$) $\times$ Number of columns ($c$)	
+\end{center}	
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{What is a Matrix?}
+We use upper-case letters to refer to entire matrices. \newline\\	\pause
+
+Example of some matrices:	\newline\\
+\begin{tabular}{c|c|c}
+    $3 \times 2$ matrix &   $2 \times 2$ matrix   &   $1 \times 4$ matrix: \\    \hline
+        &   &   \\
+    $A = \begin{bmatrix}
+    5   &   -3  \\
+    2   &   1   \\
+    0   &   4.5 \\
+    \end{bmatrix}$
+    &
+    $B = \begin{bmatrix}
+    1   &   0   \\
+    0   &   1   \\
+    \end{bmatrix}$
+    &
+    $C = \begin{bmatrix}
+    8   &   6   &   7   &   5   \\
+    \end{bmatrix}$
+\end{tabular}
+\end{frame}
+
+\begin{frame}{What is a Matrix?}
+\begin{tcolorbox}[colback=red!20!white, colframe=red!30!black, title=\textbf{Square Matrix}]
+A square matrix is a matrix in which the number of rows equals the number of columns.
+\end{tcolorbox}
+\vspace{8pt} \pause
+
+\begin{tcolorbox}[colback=red!20!white, colframe=red!30!black, title=\textbf{Matrix Elements}]
+The elements of a matrix refers to the individual numbers within the matrix.
+\end{tcolorbox}
+\vspace{8pt}	\pause
+
+We use lower-case letters to refer to individual elements of a matrix. \newline\\ \pause
+
+For instance, the element in row 3 column 1 of matrix $A$ is denoted \[a_{3,1}\]
+\end{frame}
+
+\begin{frame}{Adding and Subtracting Matrices}
+We can add and subtract matrices {\color{blue}\textbf{that are of the same dimension}} by adding or subtracting corresponding elements.
+\end{frame}
+
+\begin{frame}{Example 1}
+For the matrices 
+\[
+A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad 
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}
+\quad   \text{and}  \quad
+C =
+\begin{bmatrix}
+10  &   9   \\
+-5  &   7   \\
+\end{bmatrix}
+\]
+find each of the following, if possible.	\newline\\
+(a) \quad $A + B$
+\[
+\begin{bmatrix}
+\onslide<2->{1} & \onslide<3->{-2} & \onslide<4->{16} \\
+\onslide<5->{9} & \onslide<6->{2} & \onslide<7->{-10} \\
+\end{bmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Example 1 \quad $A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad 
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}$}
+(b) \quad $A - B$
+\[
+\begin{bmatrix}
+\onslide<2->{9} & \onslide<3->{-14} & \onslide<4->{-8} \\
+\onslide<5->{-5} & \onslide<6->{-2} & \onslide<7->{8} \\
+\end{bmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Example 1 \quad $A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad 
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}$}
+(c) \quad $B + A$
+\[
+\begin{bmatrix}
+\onslide<2->{1} & \onslide<3->{-2} & \onslide<4->{16} \\
+\onslide<5->{9} & \onslide<6->{2} & \onslide<7->{-10} \\
+\end{bmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Example 1 \quad $A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad 
+C =
+\begin{bmatrix}
+10  &   9   \\
+-5  &   7   \\
+\end{bmatrix}$}
+(d) \quad $A + C$	\newline\\
+\onslide<2->{The dimensions are not the same.
+\[A_{2\times 3} \quad C_{2\times  2}\]}
+\onslide<3->{Matrix addition is \textbf{not possible}.}
+\end{frame}
+
+
+\section{Multiply a matrix by a scalar.}
+
+\begin{frame}{What is a Scalar?}
+\begin{tcolorbox}[colback=red!20!white, colframe=red!30!black, title=\textbf{Scalar}]
+A \textbf{scalar} is a real number.
+\end{tcolorbox}
+\vspace{10pt} \pause
+
+To multiply a matrix by a scalar, multiply each element of the matrix by the scalar.
+\end{frame}
+
+\begin{frame}{Example 2}
+For the matrices
+\[
+A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad \text{and} \quad
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}
+\]
+find each of the following.	\newline\\
+(a) \quad $5A$
+\[
+\begin{bmatrix}
+\onslide<2->{25} & \onslide<3->{-40} & \onslide<4->{20} \\
+\onslide<5->{10} & \onslide<6->{0} & \onslide<7->{-5} \\
+\end{bmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Example 2 \quad $A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad \text{and} \quad
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}$}
+(b) \quad $6B$
+\[
+\begin{bmatrix}
+\onslide<2->{-24} & \onslide<3->{36} & \onslide<4->{72} \\
+\onslide<5->{42} & \onslide<6->{12} & \onslide<7->{-54} \\
+\end{bmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Example 2 \quad $A =
+\begin{bmatrix}
+5   &   -8  &   4   \\
+2   &   0   &   -1  \\
+\end{bmatrix}
+\quad \text{and} \quad
+B = 
+\begin{bmatrix}
+-4  &   6   &   12  \\
+7   &   2   &   -9  \\
+\end{bmatrix}$}
+(c) \quad $2A - 3B$
+\onslide<2->{
+\[
+2A =  
+\begin{bmatrix}
+10 & -16 & 8 \\
+4 & 0 & -2 \\
+\end{bmatrix}
+\quad 
+3B = 
+\begin{bmatrix}
+-12 & 18 & 36 \\
+21 & 6 & -27 \\
+\end{bmatrix}
+\]}
+\onslide<3->{\[2A - 3B = 
+\begin{bmatrix}
+22 & -34 & -28 \\
+-17 & -6 & 25 \\
+\end{bmatrix}\]
+}
+\end{frame}
+
+\section{Multiply matrices together.}
+
+\begin{frame}{Matrix Multiplication}
+Multiplying matrices does not work in the way you might think. \newline\\ \pause
+
+When multiplying matrices, we {\color{blue}\textbf{DO NOT}} multiply corresponding elements (like when we add and subtract corresponding elements with adding and subtracting matrices).
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+Instead, we multiply corresponding elements of a row by corresponding elements of a column and store the sum of that product of row and column in the intersection of that row and column. \newline\\ \pause
+
+That being said: \pause
+\begin{itemize}
+    \item We can only multiply matrices if the number of columns in the first matrix equals the number of rows in the second. \pause
+    \item Our final result will be a matrix with dimensions equal to the number of rows in the first matrix $\times$ the number of columns in the second.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+So to multiply 
+\[
+D =
+\begin{bmatrix}
+4   &   -1  &   -7 \\
+2   &   0   &   6   \\
+\end{bmatrix}
+\quad   \text{and}  \quad
+E =
+\begin{bmatrix}
+1   &   9   \\
+3   &   -2  \\
+4   &   0   \\
+\end{bmatrix}
+\]
+\pause 
+Note that the dimensions of $D$ are ${\color{blue}\textbf{2}} \times \mathbf{3}$ and the dimensions of $E$ are $\mathbf{3} \times {\color{blue}\textbf{2}}$. \newline\\
+\pause
+
+Since the number of rows in $D$ (\textbf{3}) equals the number of columns in $E$ (\textbf{3}), we can multiply the matrices. \newline\\ \pause
+
+The product will be a matrix with {\color{blue}\textbf{2}} rows and {\color{blue}\textbf{2}} columns. 
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+\[ 
+\begin{bmatrix}
+4 & -1 & -7 \\
+2	&	0	&	6 \\
+\end{bmatrix}  \cdot
+\begin{bmatrix}
+1	&	9	\\
+3	&	-2	\\
+4	&	0	\\
+\end{bmatrix}
+\]
+\vspace{10pt}
+\[
+\onslide<2->{
+\begin{bmatrix}
+\onslide<3->{4(1) + (-1)(3) + (-7)(4)}	\quad &	\onslide<5->{4(9) + (-1)(-2) + (-7)(0)} 	\\[4pt]
+\onslide<7->{2(1) + 0(3) + 6(4)}	\quad &	\onslide<9->{2(9) + 0(-2) + 6(0)}	\\
+\end{bmatrix} }
+\]
+\vspace{10pt}
+\[
+\onslide<4->{
+\begin{bmatrix}
+-27 						& \onslide<6->{38}	\\[4pt] 
+\onslide<8->{26}	&	\onslide<10->{18}\\
+\end{bmatrix} }
+\]
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+\emph{{\color{blue}\textbf{Note}}}: Always remember to check that the number of columns in the first matrix equals the number of rows in the second. If this is not the case, you can not multiply the matrices together.
+\end{frame}
+
+\begin{frame}{Example 3}
+For the matrices below, find the products.
+\[
+A =
+\begin{bmatrix}
+4   &   8   &   -9  \\
+2   &   0   &   3   \\
+\end{bmatrix}
+\quad
+B =
+\begin{bmatrix}
+7   &   4   \\
+1   &   -5  \\
+0   &   6   \\
+\end{bmatrix}
+\quad
+C = 
+\begin{bmatrix}
+6   &   -5  \\
+4   &   1   \\
+\end{bmatrix}
+\]
+(a) \quad $AB$
+\onslide<2->{
+\[
+\begin{bmatrix}
+\onslide<3->{4(7) + 8(1) + (-9)(0)} \quad & \onslide<6->{4(4) + 8(-5) + (-9)(6)} \\[4pt]
+\onslide<8->{2(7) + 0(1) + 3(0)} \quad & \onslide<10->{2(4) + 0(-5) + 3(6)} \\[4pt]
+\end{bmatrix}
+\]
+\vspace{8pt}
+}
+\onslide<4->{
+\[
+\begin{bmatrix}
+\onslide<5->{36}	&	\onslide<7->{-78} \\
+\onslide<9->{14}	&	\onslide<11->{26}	\\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 3 \quad $
+B =
+\begin{bmatrix}
+7   &   4   \\
+1   &   -5  \\
+0   &   6   \\
+\end{bmatrix} \quad
+A =
+\begin{bmatrix}
+4   &   8   &   -9  \\
+2   &   0   &   3   \\
+\end{bmatrix}
+$}
+(b) \quad $BA$
+\onslide<2->{
+\[
+\begin{bmatrix}
+\onslide<4->{7(4) + 4(2)} 		\quad & \onslide<6->{7(8) + 4(0)} 		\quad & \onslide<8->{7(-9) + 4(3)} \\[4pt]
+\onslide<10->{1(4) + (-5)(2)} 	\quad & \onslide<12->{1(8) + (-5)(0)} 	\quad & \onslide<14->{1(-9) + (-5)(3)} \\[4pt]
+\onslide<16->{0(4) + 6(2)} 		\onslide<18->{\quad & 0(8) + 6(0)} 		\onslide<20->{\quad & 0(-9) + 6(3)}		\\[4pt]
+\end{bmatrix}
+\]
+}
+\onslide<3->{
+\[
+\begin{bmatrix}
+\onslide<5->{36}	&	\onslide<7->{56}	&	\onslide<9->{-51}	\\
+\onslide<11->{-6}		&	\onslide<13->{8}		&	\onslide<15->{-24}	\\
+\onslide<17->{12}	&	\onslide<19->{0}		&	\onslide<21->{18}	\\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 3 \quad $A =
+\begin{bmatrix}
+4   &   8   &   -9  \\
+2   &   0   &   3   \\
+\end{bmatrix}
+\quad
+C = 
+\begin{bmatrix}
+6   &   -5  \\
+4   &   1   \\
+\end{bmatrix}$}
+(c) \quad $AC$	\newline\\
+\onslide<2->{Not possible} 
+\end{frame}
+
+\begin{frame}{Example 3 \quad $C = 
+\begin{bmatrix}
+6   &   -5  \\
+4   &   1   \\
+\end{bmatrix}$}
+(d) \quad $C^2$
+\onslide<2->{
+\[
+\begin{bmatrix}
+6	&	-5	\\
+4	&	1	\\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+6	&	-5	\\
+4	&	1	\\
+\end{bmatrix}
+\]
+}
+\vspace{10pt}
+\onslide<3->{
+\[
+\begin{bmatrix}
+\onslide<4->{6(6) + (-5)(4)} 	\quad & \onslide<6->{6(-5) + (-5)(1)} \\[4pt]
+\onslide<8->{4(6) + 1(4)}		\quad & \onslide<10->{4(-5) + 1(1)}		\\[4pt]
+\end{bmatrix}
+\]
+}
+\vspace{10pt}
+\onslide<5->{
+\[
+\begin{bmatrix}
+16	&	\onslide<7->{-35}	\\
+\onslide<9->{28}	&	\onslide<11->{-19}	\\
+\end{bmatrix}
+\]
+}
+\end{frame}
+\end{document}
