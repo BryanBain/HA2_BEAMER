@@ -1,0 +1,447 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, bm, tcolorbox}
+
+\title{Systems of Equations}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Write a system of equations using matrices}
+
+\begin{frame}{Matrix Multiplication}
+Previously, we looked at the method for multiplying matrices:
+\[
+\begin{bmatrix}
+7	&	2	&	-1	\\
+0	&	5	&	4	\\
+-3	&	6	&	2	\\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+2	\\ 1 \\ 3 \\
+\end{bmatrix}
+\onslide<2->{= \begin{bmatrix}
+13 \\ 17 \\ 6 \\
+\end{bmatrix}}
+\] 
+\onslide<3->{In this section, we will use matrix multiplication to solve a system of equations.}
+\end{frame}
+
+\begin{frame}
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{System of Equations}]
+A \textbf{system of equations} consists of 2 or more equations with 2 or more variables.
+\end{tcolorbox}
+\vspace{6pt}
+\onslide<2->{\textsc{Examples}}
+\onslide<3->{
+\begin{align*}
+2x + 5y &= 8 \\
+-7x - 3y &= 9 \\
+\end{align*}
+\begin{align*}
+4x-9y+2z &= 10 \\
+-x + z &= 15	\\
+3x+10y-12z &= 0 \\
+\end{align*}
+}
+\end{frame}
+
+\begin{frame}{Writing a System of Equations Using Matrices}
+We can use matrix multiplication with the coefficients and variables to write a system of equations using matrices.		\newline\\		\pause
+
+So
+\begin{align*}
+2x + 5y &= 8 \\
+-7x - 3y &= 9 \\
+\end{align*}
+\onslide<3->{
+becomes
+\[
+\begin{bmatrix}
+2	&	5	\\
+-7	&	-3	\\
+\end{bmatrix}
+\begin{bmatrix}
+x	\\
+y	\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+8	\\
+9	\\
+\end{bmatrix}
+\]}
+\end{frame}
+
+\begin{frame}{Writing a System of Equations Using Matrices}
+And 
+\begin{align*}
+4x-9y+2z &= 10 \\
+-x + z &= 15	\\
+3x+10y-12z &= 0 \\
+\end{align*}
+\onslide<2->{
+becomes
+\[
+\begin{bmatrix}
+4	&	-9	&	2	\\
+-1	&	\alert{0}	&	1	\\
+3	&	10	&	-12	\\
+\end{bmatrix}
+\begin{bmatrix}
+x	\\
+y	\\
+z	\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+10	\\
+15	\\
+0		\\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 1}
+Write each of the following systems of equations using matrices.	\newline\\
+(a)	\quad
+\begin{align*}
+4y	+ z &= -1 \\
+-4x - 5y + 5z &= 0 \\
+6x + 5y &= 25 \\
+\end{align*}
+\onslide<2->{
+\[
+\begin{bmatrix}
+0	&	4	&	1	\\
+-4	&	-5	&	5	\\
+6	&	5	&	0	\\
+\end{bmatrix}
+\onslide<3->{
+\begin{bmatrix}
+x \\ y \\ z \\
+\end{bmatrix}
+}
+\onslide<4->{
+= \begin{bmatrix}
+-1 \\ 0 \\ 25 \\
+\end{bmatrix}
+}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad 
+\begin{align*}
+x - y &= -9 \\
+-3x - 4y &= -8 \\
+\end{align*}
+\onslide<2->{
+\[
+\begin{bmatrix}
+1 & -1 \\
+-3 & -4 \\
+\end{bmatrix}
+\onslide<3->{
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+}
+\onslide<4->{
+= \begin{bmatrix}
+-9 \\ -8 \\
+\end{bmatrix}
+}
+\]
+}
+\end{frame}
+
+\section{Solve a system of equations using inverse matrices}
+
+\begin{frame}{Solving Equations Using Inverse Operations}
+Long ago, you learned that to solve something like
+\[ 5x = 10 \]
+you divide (the inverse operation of multiplication) both sides by 5.	\newline\\	\pause
+
+We don't ``divide" matrices in this sense, but we do need to use an inverse operation to solve the previous examples.
+\end{frame}
+
+\begin{frame}{Identity Matrices}
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{Identity Matrix}]
+An \textbf{identity matrix} is a square matrix with 1s along the diagonal from top left to bottom right, and 0s elsewhere.
+\end{tcolorbox}
+\vspace{10pt}	\pause
+\[
+I_2 = \begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+\quad
+I_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\quad
+\text{etc.}
+\]
+\end{frame}
+
+\begin{frame}{Inverse Matrix}
+\begin{tcolorbox}[colframe=green!20!black, colback = green!30!white,title=\textbf{Inverse Matrix}]
+The \textbf{inverse matrix} for square matrix $A$ is $A^{-1}$.
+\end{tcolorbox}
+\vspace{10pt}	\pause
+Inverse matrices are such that 
+\[
+A \cdot A^{-1} = I
+\]	\pause
+and that if $AX = B$ where $A$ is the matrix of coefficients and $B$ are the constants on the right side, then
+\[
+X = A^{-1} \cdot B
+\]
+\pause
+\emph{Note:} We will not discuss the techniques of how to actually find the inverse of a matrix without a calculator.
+\end{frame}
+
+\begin{frame}{Example 2}
+Solve each of the following using matrices.	\newline\\
+(a) \quad 
+\begin{align*}
+4y	+ z &= -1 \\
+-4x - 5y + 5z &= 0 \\
+6x + 5y &= 25 \\
+\end{align*}
+\onslide<2->{
+\[
+\begin{bmatrix}
+0	&	4	&	1	\\
+-4	&	-5	&	5	\\
+6	&	5	&	0	\\
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y \\ z \\
+\end{bmatrix}
+= \begin{bmatrix}
+-1 \\ 0 \\ 25 \\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 2}
+\[
+\begin{bmatrix}
+x \\ y \\ z \\
+\end{bmatrix}
+= A^{-1}B
+\]
+\pause \vspace{6pt}
+\[
+\begin{bmatrix}
+x \\ y \\ z \\
+\end{bmatrix}
+= \begin{bmatrix}
+5 \\ -1 \\ 3 \\
+\end{bmatrix}
+\]
+\pause \vspace{6pt}
+\[x = 5, \quad y = -1, \quad z = 3\]
+\end{frame}
+
+\begin{frame}{Example 2}
+(b) \quad 
+\begin{align*}
+x - y &= -9 \\
+-3x - 4y &= -8 \\
+\end{align*}
+\onslide<2->{
+\[
+\begin{bmatrix}
+1 & -1 \\
+-3 & -4 \\
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+= \begin{bmatrix}
+-9 \\ -8 \\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 2}
+\[
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+= A^{-1}B
+\]
+\pause \vspace{6pt}
+\[
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= \begin{bmatrix}
+-4 \\ 5
+\end{bmatrix}
+\]
+\pause \vspace{6pt}
+\[x = -4, \quad y = 5\]
+\end{frame}
+
+\begin{frame}{Example 2}
+(c) \quad 
+\begin{align*}
+x - 3y - 5z &= -18 \\
+-2x + 3y + 5z &= 23 \\
+-x + 3y + 6z &= 17 \\
+\end{align*}
+\onslide<2->{
+\[
+\begin{bmatrix}
+1 & -3 & - 5 \\
+-2 & 3 & 5 \\
+-1 & 3 & 6 \\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x \\ y \\ z \\
+\end{bmatrix}
+= \begin{bmatrix}
+-18 \\ 23 \\ 17 \\
+\end{bmatrix}
+\]
+}
+\end{frame}
+
+\begin{frame}{Example 2}
+\[
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+= A^{-1}B
+\]
+\pause \vspace{6pt}
+\[
+\begin{bmatrix}
+x \\ y \\ z
+\end{bmatrix}
+= \begin{bmatrix}
+-5 \\ 6 \\ -1 \\
+\end{bmatrix}
+\]
+\pause \vspace{6pt}
+\[x = -5, \quad y = 6, \quad z = -1\]
+\end{frame}
+
+
+\section{Solve applications of systems of equations}
+
+\begin{frame}{Applied Systems of Equations}
+Setting up many applied systems of equations problems boils down to 
+\begin{center}
+unit rate $\times$ amount = total amount
+\end{center}
+For instance, \$2.00 per gallon times 5 gallons of gas costs a total amount of \$10.
+\end{frame}
+
+\begin{frame}{Example 3}
+(a) \quad How many mL of a solution containing 10\% pure hydrochloric acid must be mixed with a solution containing 15\% hydrochloric acid to produce 30 mL of a solution that is 11\% hydrochloric acid?	\pause	\newline\\
+$x$ = mL of the 10\% acid solution \\
+$y$ = mL of the 15\% acid solution \pause
+\begin{align*}
+x + y &= 30 &\text{volume of total liquid} \\
+0.10x + 0.15y &= 30(0.11) &\text{volume of total hydrocholic acid} \\
+\end{align*}	
+\end{frame}
+
+\begin{frame}{Example 3}
+\[
+\begin{bmatrix}
+1	&	1	\\
+0.1	&	0.15	\\
+\end{bmatrix}
+\cdot 
+\begin{bmatrix}
+x \\ y 
+\end{bmatrix}
+= \begin{bmatrix}
+30 \\ 3.3 \\
+\end{bmatrix}
+\]
+\vspace{6pt}
+\onslide<2->{
+\[
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+= \begin{bmatrix}
+24 \\ 6 \\
+\end{bmatrix}
+\]
+}
+\newline\\ \pause
+We need to mix 24 mL of a 10\% hydrochloric acid solution with 6 mL of a 15\% hydrochloric acid solution.
+\end{frame}
+
+\begin{frame}{Example 3}
+(b) \quad A coffee shop wants to sell 8 pound bags of a coffee blend for \$28.64. They will do this by blending coffee that costs \$2.25 per pound with coffee that costs \$4.00 per pound. How much of each type of coffee should they use in the blend?	\newline\\	\pause
+$x$ = number of pounds of cheaper coffee (\$2.25 per pound) \\
+$y$ = number of pounds of more expensive coffee (\$4.00 per pound) \pause
+\begin{align*}
+x + y &= 8  &\text{weight of each bag} \\
+2.25x + 4.00y &= 28.64 &\text{total cost} \\
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 3}
+\[
+\begin{bmatrix}
+1	&	1	\\
+2.25 & 4	\\
+\end{bmatrix}
+\cdot 
+\begin{bmatrix}
+x \\ y 
+\end{bmatrix}
+= \begin{bmatrix}
+8 \\ 28.64 \\
+\end{bmatrix}
+\]
+\vspace{6pt}
+\onslide<2->{
+\[
+\begin{bmatrix}
+x \\ y \\
+\end{bmatrix}
+= \begin{bmatrix}
+1.92 \\ 6.08 \\
+\end{bmatrix}
+\]
+}
+\newline\\ \pause
+They will need 1.92 pounds of the cheaper coffee and 6.08 pounds of the more expensive coffee.
+\end{frame}
+
+\end{document}
