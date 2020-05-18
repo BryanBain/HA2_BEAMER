@@ -1,0 +1,160 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, bm, xcolor, tcolorbox}
+
+\title{Complex Fractions}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Simplify Complex Fractions}
+
+\begin{frame}{Complex Fractions}
+\begin{tcolorbox}[colframe=red!35!blue, colback=white!30!green, title=\textbf{Complex Fraction.}]
+A \textbf{complex fraction} is a rational expression which contains other rational expressions in the numerator and/or denominator.
+\end{tcolorbox}
+\vspace{12pt}	\pause
+Some examples of complex fractions are given below:
+\[
+\frac{\frac{2}{x} - 3}{\frac{5}{x} + \frac{7}{x}}
+\qquad \text{and} \qquad
+\frac{\frac{x}{x+1} + \frac{7}{x}}{\frac{3}{2x} + \frac{8}{x-4}}
+\]
+\end{frame}
+
+
+\begin{frame}{Simplifying Complex Fractions}
+Simplifying a complex fraction involves working with the expression until there is \emph{at most} only one fraction bar in the entire expression.   \newline\\	\pause 
+
+Recall that when we add or subtract fractions with unlike denominators, we need to find a common denominator first.    \newline\\	\pause
+
+Rather than take this approach with complex fractions (which we could, by the way), we are going to clear out our ``tiny" fractions by multiplying every term by the {\color{blue}\textbf{least common tiny denominator}}, or {\color{blue}\textbf{LCTD}}.
+\end{frame}
+
+\begin{frame}{Least Common Tiny Denominator}
+We find the least common tiny denominator by finding the least common denominator of all of the ``tiny" fractions in the expression. We can then simplify, if possible.  	\newline\\	\pause
+
+\begin{itemize}
+\item To find the LCTD of numbers, find the least common multiple of those numbers.   \newline\\ \pause
+\item To find the LCTD of variable terms, select the highest power of each term.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example 1}
+Simplify each of the following as much as possible.	\newline\\	
+(a) \quad $\dfrac{\left(3+\dfrac{1}{x}\right)}{\left(\dfrac{2}{x}+4\right)}$
+\onslide<2->{\quad LCTD is $x$}
+\begin{align*}
+\onslide<3->{\dfrac{\left(3+\dfrac{1}{x}\right)}{\left(\dfrac{2}{x}+4\right)} &\left(\dfrac{x}{x}\right)}
+\onslide<4->{\quad \longrightarrow \quad \frac{3x+1}{2+4x}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad $\dfrac{\left(1-\dfrac{5}{x^2}\right)}{\left(\dfrac{2}{x^2}-7\right)} $
+\onslide<2->{\quad LCTD is $x^2$}
+\begin{align*}
+\onslide<3->{\dfrac{\left(1-\dfrac{5}{x^2}\right)}{\left(\dfrac{2}{x^2}-7\right)} &\left(\dfrac{x^2}{x^2}\right)}
+\onslide<4->{\quad \longrightarrow \quad \frac{x^2-5}{2-7x^2}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(c)	\quad	$\dfrac{\left(\dfrac{1}{x}+\dfrac{y}{x^2}\right)}{\left(\dfrac{1}{y}+\dfrac{x}{y^2}\right)}$
+\onslide<2->{\quad LCTD is $x^2y^2$}
+\begin{align*}
+\onslide<3->{\dfrac{\left(\dfrac{1}{x}+\dfrac{y}{x^2}\right)}{\left(\dfrac{1}{y}+\dfrac{x}{y^2}\right)} \left(\dfrac{x^2y^2}{x^2y^2}\right)}
+\onslide<4->{\quad \longrightarrow \quad \dfrac{xy^2+y^3}{x^2y+x^3}}
+\end{align*} 
+\end{frame}
+
+\begin{frame}{Example 1c}
+\begin{align*}
+&\dfrac{xy^2+y^3}{x^2y+x^3}	\\[12pt]
+\onslide<2->{&=\dfrac{y^2(x+y)}{x^2(y+x)}} \\[12pt]
+\onslide<3->{&=\dfrac{y^2}{x^2}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(d)	\quad $\dfrac{\left(\dfrac{x}{y}-1\right)}{\left(\dfrac{x^2}{y^2}-1\right)}$
+\onslide<2->{LCTD is $y^2$}
+\begin{align*}
+\onslide<2->{\dfrac{\left(\dfrac{x}{y}-1\right)}{\left(\dfrac{x^2}{y^2}-1\right)}\left(\dfrac{y^2}{y^2}\right)}
+\onslide<3->{\quad \longrightarrow \quad \dfrac{xy-y^2}{x^2-y^2}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1d}
+\begin{align*}
+&\dfrac{xy-y^2}{x^2-y^2}	\\[12pt]
+\onslide<2->{&= \dfrac{y(x-y)}{(x+y)(x-y)}}	\\[12pt]
+\onslide<3->{&= \dfrac{y}{x+y}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(e)	\quad $\dfrac{\left(\dfrac{1}{x+7}-\dfrac{1}{x}\right)}{7}$
+\onslide<2->{\quad LCTD is $x(x+7)$}	\newline\\
+\begin{align*}
+\onslide<3->{&\dfrac{\left(\dfrac{1}{x+7}-\dfrac{1}{x}\right)}{7} \left(\dfrac{x(x+7)}{x(x+7)}\right)} \\[10pt]
+\onslide<4->{&= \dfrac{x-(x+7)}{7x(x+7)}}		\\[10pt]
+\onslide<5->{&= \dfrac{x-x-7}{7x(x+7)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1e}
+\begin{align*}
+&\dfrac{x-x-7}{7x(x+7)}		\\[12pt]
+\onslide<2->{&= \dfrac{-7}{7x(x+7)}}	\\[12pt]
+\onslide<3->{&= \dfrac{-1}{x(x+7)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(f) \quad $\dfrac{\left(\dfrac{x+1}{x} + \dfrac{x+1}{x-1} \right)}{\left( \dfrac{x+2}{x} - \dfrac{2}{x-1}\right)}$
+\onslide<2->{\quad LCTD is $x(x-1)$}	\newline\\
+\begin{align*}
+\onslide<3->{
+\dfrac{\left(\dfrac{x+1}{x} + \dfrac{x+1}{x-1} \right)}{\left( \dfrac{x+2}{x} - \dfrac{2}{x-1}\right)} \left(\dfrac{x(x-1)}{x(x-1)} \right)
+}	\\[12pt]
+\onslide<4->{
+\dfrac{(x+1)(x-1) + x(x+1)}{(x+2)(x-1)-2x}
+}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1f}
+\begin{align*}
+& \dfrac{(x+1)(x-1) + x(x+1)}{(x+2)(x-1)-2x} \\[14pt]
+\onslide<2->{
+&=\dfrac{\onslide<3->{x^2-1}\onslide<4->{+x^2+x}}{\onslide<5->{x^2+x-2}\onslide<6->{-2x}}
+}	\\[12pt]
+\onslide<7->{&=
+\dfrac{2x^2+x-1}{x^2-x-2}
+}	\\[12pt]
+\onslide<8->{&=
+\dfrac{(2x-1)(x+1)}{(x-2)(x+1)}
+}
+\onslide<9->{\quad \longrightarrow \quad = \dfrac{2x-1}{x-2}}
+\end{align*}
+\end{frame}
+
+
+\end{document}
