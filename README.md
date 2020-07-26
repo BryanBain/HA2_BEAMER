@@ -46,4 +46,7 @@ Beamer slides of Honors Algebra 2 notes
   <li>Trig Functions of Any Angle</li>
   <li>Graphs of Sine and Cosine Functions</li>
   <li>Graphs of Other Trig Functions</li>
+  <li>Intro to Probability</li>
+  <li>Probability: AND</li>
+  <li>Probability: OR</li>
 </ol>
