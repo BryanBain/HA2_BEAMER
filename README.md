@@ -35,6 +35,7 @@ Beamer slides of Honors Algebra 2 notes
   <li>Simplifying Radical Expression</li>
   <li>Radical Equations and Ineqaulities</li>
   <li>Complex Fractions</li>
+  <li>Adding and Subtracting Rational Expressions</li>
   <li>Rational Equations and Inequalities</li>
   <li>Parabolas</li>
   <li>Circles</li>
