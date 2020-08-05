@@ -1,0 +1,120 @@
+\documentclass[t]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, bm, xcolor, tcolorbox}
+\everymath{\displaystyle}
+
+\title{Complex Fractions}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Add and subtract rational expressions with like denominators}
+
+\begin{frame}{Fractions with like denominators}
+Recall that to add or subtract fractions with {\color{blue}\textbf{like denominators}}, you keep the denominators and add (or subtract) the numerators. \newline\\	\pause
+
+Remember to \alert{distribute the sign} to the numerator in the second fraction.
+\end{frame}
+
+\begin{frame}{Example 1}
+Simplify each.	\newline\\
+(a)	\quad	$\frac{x+6}{9x^3+54x^2} + \frac{x+2}{9x^3+54x^2}$
+\begin{align*}
+\onslide<2->{&\frac{x+6}{9x^3+54x^2} + \frac{x+2}{9x^3+54x^2}} \\[12pt]
+\onslide<3->{&= \frac{x+6+(x+2)}{9x^3+54x^2}} \\[12pt]
+\onslide<4->{&= \frac{2x+8}{9x^3+54x^2}}	\\[12pt]
+\onslide<5->{&= \frac{2(x+4)}{9x^2(x+6)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad $\frac{x-2}{2x^2-9x-18} + \frac{6x+1}{2x^2-9x-18}$
+\begin{align*}
+\onslide<2->{& \frac{x-2}{2x^2-9x-18} + \frac{6x+1}{2x^2-9x-18}}	\\[12pt]
+\onslide<3->{&= \frac{x-2+(6x+1)}{2x^2-9x-18}} \\[12pt]
+\onslide<4->{&= \frac{7x-1}{2x^2-9x-18}}	\\[12pt]
+\onslide<5->{&= \frac{7x-1}{(2x-3)(x+6)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(c)	\quad	 $\frac{x+5}{6x+4}-\frac{4x-1}{6x+4}$
+\begin{align*}
+\onslide<2->{&\frac{x+5}{6x+4}-\frac{4x-1}{6x+4}}	\\[12pt]
+\onslide<3->{&= \frac{x+5-(4x-1)}{6x+4}} \\[12pt]
+\onslide<4->{&= \frac{x+5-4x+1}{6x+4}} \\[12pt]
+\onslide<5->{&= \frac{-3x+6}{6x+4}} \\[12pt]
+\onslide<6->{&= \frac{-3(x-2)}{2(3x+2)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(d)	\quad	$\frac{x-1}{3x^2-10x-8} - \frac{x+6}{3x^2-10x-8}$
+\begin{align*}
+\onslide<2->{& \frac{x-1}{3x^2-10x-8} - \frac{x+6}{3x^2-10x-8}}	\\[12pt]
+\onslide<3->{&= \frac{x-1-(x+6)}{3x^2-10x-8}}	\\[12pt]
+\onslide<4->{&= \frac{x-1-x-6}{3x^2-10x-8}}	\\[12pt]
+\onslide<5->{&= \frac{-7}{3x^2-10x-8}}
+\end{align*}
+\end{frame}
+
+\section{Add and subtract rational expressions with unlike denominators}
+
+\begin{frame}{Adding and Subtracting Fractions with Unlike Denominators}
+Recall that before adding or subtracting fractions with unlike denominators, {\color{blue}\textbf{you need to get a common denominator first.}}	\newline\\	\pause
+
+For instance,
+\begin{align*}
+\onslide<2->{& \frac{2}{5} + \frac{1}{3}}	\\[12pt]
+\onslide<3->{&= \frac{2(3)}{5(3)} + \frac{1(5)}{3(5)}} \\[12pt]
+\onslide<4->{&= \frac{6}{15} + \frac{5}{15}} \\[12pt]
+\onslide<5->{&= \frac{11}{15}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Ancient Secret to This Method}
+Notice you had to find the \alert{least common multiple} of the denominators 3 and 5 (which ended up being 15). \newline\\	\pause
+
+For adding and subtracting rational expressions with unlike denominators, {\color{blue}\textbf{factor the denominators completely and multiply by factors that differ}}. (Easier to see that process in action than it is to understand it written down like that).
+\end{frame}
+
+\begin{frame}{Example 2}
+Simplify each.	\newline\\
+(a) \quad $\frac{6}{x+4	} + \frac{2}{3x+6}$
+\begin{align*}
+\onslide<2->{& \frac{6}{x+4} + \frac{2}{3x+6}} \\[12pt]
+\onslide<3->{&= \frac{6}{x+4} + \frac{2}{3(x+2)}} \\[12pt]
+\onslide<4->{&= \frac{6(\alert{3(x+2)})}{(x+4)(\alert{3(x+2)})} + \frac{2(\alert{x+4})}{3(x+2)(\alert{x+4})}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 2a}
+\[\frac{6(\alert{3(x+2)})}{(x+4)(\alert{3(x+2)})} + \frac{2(\alert{x+4})}{3(x+2)(\alert{x+4})}\]
+\begin{align*}
+\onslide<2->{& \frac{6(3x+6) + 2x+8}{3(x+2)(x+4)}}	\\[12pt]
+\onslide<3->{&= \frac{18x+36+2x+8}{3(x+2)(x+4)}} \\[12pt]
+\onslide<4->{&= \frac{20x+44}{3(x+2)(x+4)}}	\\[12pt]
+\onslide<5->{&= \frac{4(5x+11)}{3(x+2)(x+4)}}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 2}
+(b) \quad 
+\end{frame}
+\end{document}
