@@ -30,7 +30,9 @@ Beamer slides of Honors Algebra 2 notes
   <li>Transforming Functions</li>
   <li>Domain and Range</li>
   <li>Inverse Functions</li>
-  <li>Matrix Algebra</li>
+  <li>Vectors and Matrices: Adding, Subtracting, and Scalar Multiplication</li>
+  <li>Matrix Multiplication</li>
+  <!--><li>Matrix Algebra</li><-->
   <li>Systems of Equations</li>
   <li>Simplifying Radical Expression</li>
   <li>Radical Equations and Ineqaulities</li>
