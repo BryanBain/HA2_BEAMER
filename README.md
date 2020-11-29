@@ -37,8 +37,8 @@ Beamer slides of Honors Algebra 2 notes
   <li>3 X 3 (and higher) Systems of Equations</li>
   <li>Simplifying Radical Expression</li>
   <li>Radical Equations and Ineqaulities</li>
-  <li>Complex Fractions</li>
   <li>Adding and Subtracting Rational Expressions</li>
+  <li>Complex Fractions</li>
   <li>Rational Equations and Inequalities</li>
   <li>Parabolas</li>
   <li>Circles</li>
